@@ -82,7 +82,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : blogchintojucom 
     livefyre :
       site_id : 123
     intensedebate :
@@ -98,11 +98,12 @@ JB :
   # Set 'provider' to false to turn analytics off globally.
   #        
   analytics :
-    provider : google 
+    provider : false 
+            #enable once everything is live        
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-4664613-1'
     getclicky :
-      site_id : 
+        site_id : 
     mixpanel :
         token : '_MIXPANEL_TOKEN_'
     piwik :
