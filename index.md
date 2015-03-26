@@ -1,11 +1,16 @@
 ---
 layout: page
-title: Hello all 
-tagline: My odd disconnected ramblings about things in general... 
+title: Chinto's Blog 
+tagline: Can you get something out of nothing.. 
 ---
 {% include JB/setup %}
 
-## Recent Posts
+<blockquote>
+Hi, I'm Kishore and I love programming, learning and using different technologies and building awesome web applications.  
+Here is my attempt at jotting down things that might be usefull or not....
+</blockquote>
+
+## All Posts 
 
 <ul class="posts">
   {% for post in site.posts %}
