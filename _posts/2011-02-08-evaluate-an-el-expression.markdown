@@ -20,22 +20,22 @@ tags:
 Once you start using EL heavily within your UI, eventually you will want to use it/evaluate it back in your EJB's and Seam/Spring components
 
 There are three steps to evaluating an EL expression.
-[java]
-//get current EL context
-javax.el.ELContext elContext = javax.faces.context.FacesContext.getCurrentInstance().getELContext();
 
-//get the expression factory (for seam). You can probably do ExpressionFactory.newInstance() if not using seam .
-javax.el.ExpressionFactory expressionFactory = org.jboss.seam.core.Expressions.instance().getExpressionFactory();
+        //get current EL context
+        javax.el.ELContext elContext = javax.faces.context.FacesContext.getCurrentInstance().getELContext();
 
-//Create value expression as the EL I'm evaluating is a value e.g. #{bean.property} . Create MethodExpression if the EL is a method e.g. #{bean.method()}
-javax.el.ValueExpression valueExpression = expressionFactory.createValueExpression(elContext, elExpressionYouAreEvaluating, WhateverYouAreExpecting.class);
+        //get the expression factory (for seam). You can probably do ExpressionFactory.newInstance() if not using seam .
+        javax.el.ExpressionFactory expressionFactory = org.jboss.seam.core.Expressions.instance().getExpressionFactory();
 
-// get value and dont' forget to cast.
-whateverYouAreExpecting = (WhateverYouAreExpecting) valueExpression.getValue(elContext);
-[/java]
+        //Create value expression as the EL I'm evaluating is a value e.g. #{bean.property} . Create MethodExpression if the EL is a method e.g. #{bean.method()}
+        javax.el.ValueExpression valueExpression = expressionFactory.createValueExpression(elContext, elExpressionYouAreEvaluating, WhateverYouAreExpecting.class);
+
+        // get value and dont' forget to cast.
+        whateverYouAreExpecting = (WhateverYouAreExpecting) valueExpression.getValue(elContext);
+
 Yup.. that's how convulted this is . It should more be like below
-[java]
-//NOTE: imaginary code
-Object value = ExpressionFactory.getValue("#{bean.property}");
-[/java]
+
+        //NOTE: imaginary code
+        Object value = ExpressionFactory.getValue("#{bean.property}");
+
 [That's what these guys are asking as well..](http://www.sfwk.org/Documentation/ELWishList)
