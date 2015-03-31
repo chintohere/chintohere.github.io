@@ -13,7 +13,7 @@ Ever seen this. This usually happens when the db column in question is not a BLO
 
 In my case, the column was a CLOB. You wouldn't think it should work, but it doesn't.
 
-
+{% highlight ruby%}
         Caused by: java.sql.SQLException: Invalid column type: getBLOB not implemented for class oracle.jdbc.driver.T4CClobAccessor
                 at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:113) ~[ojdbc14-10.2.0.5.0.jar:Oracle JDBC Driver version - "10.2.0.5.0"]
                 at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:147) ~[ojdbc14-10.2.0.5.0.jar:Oracle JDBC Driver version - "10.2.0.5.0"]
@@ -39,6 +39,5 @@ In my case, the column was a CLOB. You wouldn't think it should work, but it doe
                 at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:274) ~[hibernate-core-3.6.10.Final.jar:3.6.10.Final]
                 at org.hibernate.loader.Loader.loadEntity(Loader.java:2037) ~[hibernate-core-3.6.10.Final.jar:3.6.10.Final]
                 ... 17 common frames omitted
-        `
-
+{% endhighlight %}
 
