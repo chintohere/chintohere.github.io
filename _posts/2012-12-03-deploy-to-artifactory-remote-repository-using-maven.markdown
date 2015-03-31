@@ -37,37 +37,11 @@ Below configuration can be obtained from your artifactory
 
 
 
-
-
-
-
-
-`<``server``>`
-
-
-
-
-`  <``id``>{repo-id}</``id``>`
-
-
-
-
-`  <``username``>{repo-username}</``username``>`
-
-
-
-
-`  <``password``>{password/encrypted password}</``password``>`
-
-
-
-
-`</``server``>`
-
-
-
-
-
+        <server>
+          <id>{repo-id}</id>
+          <username>{repo-username}</username>
+          <password>{password/encrypted password}</password>
+        </server>
 
 
 
@@ -88,34 +62,11 @@ More info here
 
 
 
-
-
-
-
-
-
-
-`<``plugin``>`
-
-
-
-
-`  <``groupId``>org.apache.maven.plugins</``groupId``>`
-
-
-
-
-`  <``artifactId``>maven-deploy-plugin</``artifactId``>`
-
-
-
-
-`  <``version``>2.7</``version``>`
-
-
-
-
-`</``plugin``>`
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.7</version>
+        </plugin>
 
 
 
@@ -129,57 +80,16 @@ More info [http://maven.apache.org/plugins/maven-deploy-plugin/plugin-info.html
 
 ## Add remote (artifactory) repository to your POM
 
-
-
-
-
-
-
-
-
-
-`<``distributionManagement``>`
-
-
-
-
-`  <``repository``>`
-
-
-
-
-`    <``id``>{repo-id}</``id``>`
-
-
-
-
-`    <``name``>{repo-id}</``name``>`
-
-
-
-
-`    <``url``>[http://](http://integ/){repo-host-name}/artifactory/{repo-url}</``url``>`
-
-
-
-
-`  </``repository``>`
-
-
-
-
-`</``distributionManagement``>`
-
-
-
-
-
-
+        <distributionManagement>
+          <repository>
+            <id>{repo-id}</id>
+            <name>{repo-id}</name>
+            <url>[http://](http://integ/){repo-host-name}/artifactory/{repo-url}</url>
+          </repository>
+        </distributionManagement>
 
 
 More info at
-
-
 
 	
   * Artifactory - [http://wiki.jfrog.org/confluence/display/RTF/Configuring+Deployment](http://wiki.jfrog.org/confluence/display/RTF/Configuring+Deployment)
@@ -189,44 +99,17 @@ More info at
 
 
 
-
 # Deploy Using Maven
 
 
 Running below command would deploy it to the default repository
 
-
-
-
-
-
-
-
-`1.``mvn deploy`
-
-
-
-
-
-
+        mvn deploy
 
 
 In case of multiple repositories in pom, specify repository id.
 
 
-
-
-
-
-
-
-`1.``mvn deploy -DrepositoryId`
-
-
-
-
-
-
-
+        mvn deploy -DrepositoryId
 
 More info at [http://maven.apache.org/plugins/maven-deploy-plugin/usage.html](http://maven.apache.org/plugins/maven-deploy-plugin/usage.html)
