@@ -102,6 +102,8 @@ JB :
             #enable once everything is live        
     google : 
         tracking_id : 'UA-4664613-2'
+    google_tags:
+            tag_id: 'GTM-M9N9QD' 
     getclicky :
         site_id : 
     mixpanel :
