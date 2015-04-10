@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Kishore Chintoju 
-tagline: Father, Husband, Programmer and a Lifelong Learner
+title: Chinto's Blog 
+tagline: Can you get something out of nothing... 
 ---
 {% include JB/setup %}
 
 <blockquote>
-Hi, I'm Kishore and I love making things. Programming is one of my faviourite tools. I love learning and using different technologies and building awesome web applications.  
+This is my attempt to note down things I found useful and were not already out there at the time of writing. They are not limited to any topic. Hopefully they will benefit someone.
 </blockquote>
 
-## Recent posts*(or not so recent)* 
+## Recent posts
 <div class="home">
 
   <div class="posts">
