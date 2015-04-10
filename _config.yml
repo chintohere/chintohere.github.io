@@ -101,7 +101,7 @@ JB :
     provider : google 
             #enable once everything is live        
     google : 
-    tracking_id : 'UA-4664613-2'
+        tracking_id : 'UA-4664613-2'
     getclicky :
         site_id : 
     mixpanel :
