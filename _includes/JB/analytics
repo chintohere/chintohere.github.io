@@ -3,6 +3,8 @@
 {% case site.JB.analytics.provider %}
 {% when "google" %}
   {% include JB/analytics-providers/google %}
+{% when "google_tags" %}
+  {% include JB/analytics-providers/google_tags %}
 {% when "getclicky" %}
   {% include JB/analytics-providers/getclicky %}
 {% when "mixpanel" %}
@@ -12,5 +14,5 @@
 {% when "custom" %}
   {% include custom/analytics %}
 {% endcase %}
-
 {% endif %}
+
