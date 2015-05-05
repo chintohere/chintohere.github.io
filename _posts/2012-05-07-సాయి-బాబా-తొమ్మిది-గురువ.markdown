@@ -31,3 +31,6 @@ Please download/read/correct/distribute as you see fit.
 
 
 
+## Preview
+
+<iframe src="https://docs.google.com/document/pub?id=1DPXnXbdldx1-xMvR0VU_Rtp1csgelRVetu-t5XXBwgU&amp;embedded=true" width="100%" height="500px"></iframe>
